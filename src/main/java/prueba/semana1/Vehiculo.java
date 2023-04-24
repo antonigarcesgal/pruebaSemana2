@@ -6,11 +6,11 @@ import java.util.Date;
  * Vehiculo.java Clase para el objecto Vehiculo
  */
 public abstract class Vehiculo implements Conducible {
-    protected String color;
-    protected String marca;
-    protected String precio;
-    protected String matricula;
-    protected int numRuedas;
+    private String color;
+    private String marca;
+    private String precio;
+    private String matricula;
+    private int numRuedas;
     private boolean arrancado = false;
     protected static final String TIPO = "Vehiculo";
 
