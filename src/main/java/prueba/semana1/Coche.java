@@ -1,11 +1,17 @@
 package prueba.semana1;
 
+import javax.persistence.*;
+
 /**
  * Coche.java Clase para el objecto Coche
  */
+@Entity
+@Table(name = "coche")
 public class Coche extends Vehiculo {
 
+	@Column
     private String tipoMarchas;
+
     protected static final String TIPO = "Coche";
 
     /**

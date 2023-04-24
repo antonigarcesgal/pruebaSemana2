@@ -2,20 +2,37 @@ package prueba.semana1;
 
 import java.util.Date;
 
+import javax.persistence.*;
+
 /**
  * Vehiculo.java Clase para el objecto Vehiculo
  */
+
+@MappedSuperclass
 public abstract class Vehiculo implements Conducible {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int vehiculo_id;
+	
+	@Column
     private String color;
+	@Column
     private String marca;
+	@Column
     private String precio;
+	@Column
     private String matricula;
+	@Column
     private int numRuedas;
+	@Column
     private boolean arrancado = false;
+	@Column
     protected static final String TIPO = "Vehiculo";
 
     // Variables del viaje
+	@Column
     protected Date horaInicio;
+	@Column
     protected int distanciaRecorrida = 0;
 
     /**

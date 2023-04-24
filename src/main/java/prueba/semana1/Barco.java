@@ -1,5 +1,7 @@
 package prueba.semana1;
 
+import javax.persistence.*;
+
 /**
  * Barco.java Clase para el objecto Barco
  *
@@ -7,8 +9,12 @@ package prueba.semana1;
  * @revisor: Carlos
  * @version: 1.0
  */
+@Entity
+@Table(name = "barco")
 public class Barco extends Vehiculo {
+	@Column
     private String tipoBarco;
+
     protected static final String TIPO = "Barco";
 
     /**
