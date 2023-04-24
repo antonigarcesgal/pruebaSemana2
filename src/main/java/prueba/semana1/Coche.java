@@ -4,6 +4,9 @@ import javax.persistence.*;
 
 /**
  * Coche.java Clase para el objecto Coche
+ * @autor: Antoni
+ * @revisor: Carlos
+ * @version: 1.1
  */
 @Entity
 @Table(name = "coche")
@@ -28,6 +31,10 @@ public class Coche extends Vehiculo {
      * @param tipoMarchas tipo de marchas del coche
      * 
      */
+    public Coche() {
+    	super();
+    }
+    
     public Coche(String color, String marca, String precio, String matricula, String tipoMarchas) {
         super(color, marca, precio, matricula, 4); // Siempre tiene 4 ruedas si es un coche
         this.tipoMarchas = tipoMarchas;

@@ -54,14 +54,28 @@ public abstract class Vehiculo implements Conducible {
 
     }
 
-    /**
+    public Vehiculo() {
+		
+	}
+
+	/**
      * Impresión de los datos del vehiculo.
      */
     public void imprimirDatos() {
+    	System.out.println("La vehiculo_id es: " + vehiculo_id);
         System.out.println("La marca es: " + marca);
         System.out.println("El color es: " + color);
         System.out.println("La matricula es: " + matricula);
         System.out.println("El precio es: " + precio);
+    }
+    
+    /**
+     * Devuelve el vehiculo_id.
+     *
+     * @return Integer vehiculo_id
+     */
+    public Integer getVechiculo_Id() {
+        return vehiculo_id;
     }
 
     /**

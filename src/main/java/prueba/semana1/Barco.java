@@ -7,45 +7,49 @@ import javax.persistence.*;
  *
  * @autor: Antoni
  * @revisor: Carlos
- * @version: 1.0
+ * @version: 1.1
  */
 @Entity
 @Table(name = "barco")
 public class Barco extends Vehiculo {
 	@Column
-    private String tipoBarco;
+	private String tipoBarco;
 
-    protected static final String TIPO = "Barco";
+	protected static final String TIPO = "Barco";
 
-    /**
-     * Constructor de la clase Barco.
-     *
-     * @param color     El color del Barco.
-     * @param marca     La marca del Barco.
-     * @param precio    El precio del Barco.
-     * @param matricula La matricula del Barco.
-     * @param tipoBarco El tipo de Barco.
-     */
-    public Barco(String color, String marca, String precio, String matricula, String tipoBarco) {
-        super(color, marca, precio, matricula, 0);
-        this.tipoBarco = tipoBarco;
+	/**
+	 * Constructor de la clase Barco.
+	 *
+	 * @param color     El color del Barco.
+	 * @param marca     La marca del Barco.
+	 * @param precio    El precio del Barco.
+	 * @param matricula La matricula del Barco.
+	 * @param tipoBarco El tipo de Barco.
+	 */
+	public Barco() {
+		super();
+	}
 
-    }
+	public Barco(String color, String marca, String precio, String matricula, String tipoBarco) {
+		super(color, marca, precio, matricula, 0);
+		this.tipoBarco = tipoBarco;
 
-    /**
-     * Devuelve el tipoBarco.
-     *
-     * @return String
-     */
-    public String getTipoBarco() {
-        return tipoBarco;
-    }
+	}
 
-    @Override // <- Bien por el uso de Override
-    public void imprimirDatos() {
-        System.out.println("Este vehiculo es un barco");
-        System.out.println("Este barco es de tipo" + tipoBarco);
-        super.imprimirDatos();
-    }
+	/**
+	 * Devuelve el tipoBarco.
+	 *
+	 * @return String
+	 */
+	public String getTipoBarco() {
+		return tipoBarco;
+	}
+
+	@Override // <- Bien por el uso de Override
+	public void imprimirDatos() {
+		System.out.println("Este vehiculo es un barco");
+		System.out.println("Este barco es de tipo" + tipoBarco);
+		super.imprimirDatos();
+	}
 
 }
